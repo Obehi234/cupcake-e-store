@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Online Cake Shop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="order_cupcakes">Order Cupcakes</string>
+    <string name="one_cupcake">ONE CUPCAKE</string>
+    <string name="six_cupcakes">SIX CUPCAKES (6)</string>
+    <string name="twelve_cupcakes">TWELVE CUPCAKES (12)</string>
+    <string name="Vanilla">Vanilla</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="red_velvet">Red Velvet</string>
+    <string name="salted_caramel">Salted Caramel</string>
+    <string name="coffee">Coffee</string>
+    <string name="next">NEXT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="quantity">Quantity</string>
+    <string name="flavor">flavor</string>
+    <string name="pickup_date">date</string>
+    <string name="send">SEND ORDER</string>
+    <string name="subtotal_5_00">Subtotal $5.00</string>
+</resources>

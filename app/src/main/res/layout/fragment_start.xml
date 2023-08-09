@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StartFragment">
+
+
+    <ImageView
+        android:id="@+id/cupcake_img"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:importantForAccessibility="no"
+        android:scaleType="center"
+        android:src="@drawable/cupcake_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Order Cupcake"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:textColor="@color/material_on_background_emphasis_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cupcake_img"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        />
+
+    <Button
+        android:id="@+id/order_one_cupcake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:backgroundTint="@color/pink_600"
+        android:minWidth="@dimen/order_cupcake_button_width"
+        android:onClick="@{() -> startFragment.orderCupcake(1)}"
+        android:text="@string/one_cupcake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCake" />
+
+    <Button
+        android:id="@+id/order_six_cupcakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink_600"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:minWidth="@dimen/order_cupcake_button_width"
+        android:onClick="@{() -> startFragment.orderCupcake(6)}"
+        android:text="@string/six_cupcakes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_one_cupcake" />
+
+    <Button
+        android:id="@+id/order_twelve_cupcakes"
+        android:backgroundTint="@color/pink_600"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:minWidth="@dimen/order_cupcake_button_width"
+        android:onClick="@{() -> startFragment.orderCupcake(12)}"
+        android:text="@string/twelve_cupcakes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_six_cupcakes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

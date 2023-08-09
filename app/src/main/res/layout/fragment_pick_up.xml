@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_16dp"
+    tools:context=".PickUpFragment">
+
+    <RadioGroup
+        android:id="@+id/date_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/Thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Thursday"/>
+
+        <RadioButton
+            android:id="@+id/Friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Friday" />
+
+        <RadioButton
+            android:id="@+id/Saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Saturday" />
+
+        <RadioButton
+            android:id="@+id/Sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Sunday" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Widget.Cupcake.Divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/side_margin"
+        android:layout_marginBottom="@dimen/side_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_options" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        style="@style/Widget.Cupcake.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/side_margin"
+        android:text="@string/subtotal_5_00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/side_margin"
+        android:backgroundTint="@color/pink_600"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel_button"
+        app:layout_constraintTop_toBottomOf="@id/subtotal"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/side_margin"
+        android:onClick="@{() -> pickupFragment.cancelOrder()}"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@id/next_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/next_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
